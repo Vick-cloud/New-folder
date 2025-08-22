@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicky Dwira - Frontend Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-square"></span>
+                <span class="logo-text">VDwira</span> <span class="role-text">/ FRONTEND DEVELOPER</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">ABOUT ME</a></li>
+                <li><a href="#skills" class="nav-link">SKILLS</a></li>
+                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="#education" class="nav-link">EDUCATION</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="profile-image-container">
+                        <img src="assets/VBD.png" alt="Vicky Dwira" class="profile-image">
+                    </div>
+                    <!-- <h2 class="hero-name">Vicky<br>Dwira</h2> -->
+                </div>
+                <div class="hero-right">
+                    <h1 class="hero-title">Hi, I am Vicky Dwira</h1>
+                    <p class="hero-subtitle">A tech enthusiast! Passionate about creating solutions through coding, design and problem-solving.</p>
+                    <div class="hero-buttons">
+                        <a href="#cv-download" class="btn btn-primary">RESUME</a>
+                        <a href="#projects" class="btn btn-secondary">PROJECTS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I'm a passionate Frontend Web Developer. </p>
+                
+                <p>My transition into frontend development stems from my love for creating intuitive, user-friendly interfaces and my experience with data visualization tools. I bring a methodical approach to problem-solving, ensuring that every project I work on is not only functional but also provides an exceptional user experience.</p>
+                
+                <p>When I'm not coding, you'll find me editing photos for media projects or exploring the latest web technologies. I believe in continuous learning and staying updated with industry trends to deliver modern, responsive web solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Design Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Adobe Lightroom</span>
+                        <span class="skill-tag">Canva</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Development Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Visual Studio</span>
+                        <span class="skill-tag">Microsoft Office Suite</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Specialized Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Climate Data Tool (CDT)</span>
+                        <span class="skill-tag">Climate Predictability Tool (CPT)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Weather Dashboard">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" onclick="openProject('weather-dashboard')">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather Dashboard</h3>
+                        <p>Interactive weather dashboard displaying real-time climate data with responsive charts and forecasting capabilities. Built with HTML, CSS, javascript.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Portfolio Gallery">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" onclick="openProject('portfolio-gallery')">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Photography Portfolio</h3>
+                        <p>Responsive photography portfolio website with dynamic image galleries, lightbox effects, and smooth animations. Showcases media editing and web design skills.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Data Visualization">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" onclick="openProject('data-visualization')">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Climate Data Visualizer</h3>
+                        <p>Interactive web application for visualizing climate data trends and patterns. Features dynamic charts, filtering options, and responsive design for optimal user experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">🎓</div>
+                    <h3>Bachelor's Degree</h3>
+                    <p>Information Technology</p>
+                    <span class="education-year">2021</span>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-icon">📜</div>
+                    <h3>Web Development Certification</h3>
+                    <p>IBM Certificate</p>
+                    <span class="education-year">2025</span>
+                </div>
+                
+                
+                
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABYUlEQVR4AeyUPS9EQRSGZ4lKrRCdisZXItEoKTQSvUItUel9tEr0oldoVBKJWiJIiIr4B0oVz3Pjbuauu3vvGiSS3ZxnzsyZ98y7O7t3+8Ivv3oGlRccX9Ey6gd4T+Se/iXIIjY4pDIGqTHOAfuQRWwwklVCUNBg/h3spTWMOkhs4FquGFag27DH3kJfmcEgihPYg36oCjVq7bG3oC8zWEPxBptwAUPQLtxTo9YeewvaMoMjFLPwAvNwA3PQGtbcU6PWHnsLujIDBXcME3AOw3AJ65CHc2vuqVFrT77fzO0MFLwyLMIuDMABHH/i3No2azVqmX6NTgaqfei2mCyAh6ySxbm1HdZqSOVRZZB3eQ3TLLzza/IUWCN1jroGnvLE4MEz5GeoFd0Y1DqwVfSnBv6WfQN+aSl4RvMK40+wwc4jpMYtB/ickEKIDU6p+HfdIKcwSf8ZZBEbZIWfHv6/wQcAAAD//8c6UNcAAAAGSURBVAMAewNSMdFJzUYAAAAASUVORK5CYII="/></a> </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>dwiravicky@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACMklEQVR4AcyUTYhOURjH7/hKRBYUKUkRiRSlfGRhIYlSIlKysbASIh8rRCnJggWRBVKWhCJRklBKNrObpmmmab6ameZjMx+/3ztz73veM/fOvDM1NW//33Oe5znn9tz7nuecWck0/2ZkAV+qgw//DfdhDxTKxfFkDYkr8AwWQZ6WkNwG5+Ar/AFjhkrFBRYz/QFuw2n4CPMg1CDBctgLl6EFtsIPOAYVigt8Z3YfpNqB8wZmQ6hmgi9wF9bCa5gLfvU6xkxxgU3ZTNk5hPsEQnUR/Idb0A/H4QUsgKeQKS7Qm81UOv5dV4OUe7OR+Br8hDlwBvy7djEKQ5LEBepK2XyTPcT0MjgJTbAFLkEfPAZ1WCNxgX8mc6gl5xsylNSKfQnnQe3XgA3CkOzWSFzgm8mIv8Q7oQFifR5NbBgdfRHdNRqJC7w3GeEGtkW5NPRLagiWgorjMXtQz6q3EOpoGEzWj7/A529oAuweOyZIldwV2FdwCgqVV8Bj/yh4Yj7+O/BAMZRkF3nQ/Puek7kJucor4MILmF+QajWOm23fe1Ld3PXkUl3HeQjuB0NZRQU8nQdYlnYFbrIQ48k1txk/1lkSnmYPHe6Iigo4a0dsx/kE1eoECx9ApvEKuKgT4+XntVx0jbCkQt1hNFEB1w5hfCv34R5+DxTJr3WfsvlqCqSLvcguEqwCW9fOasRP5d4cIRiATJMpkD7UjnMHDsJKsHPErvIaJ1XWVAqUn67Cm/YCwwAAAP//g52EXAAAAAZJREFUAwAMzlYx2rqVdAAAAABJRU5ErkJggg=="/></a></div>
+                    <div>
+                            <h3>Phone</h3>
+                            <p>+233(0)208564341</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><a href=""> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACIElEQVR4AcyVuUtdQRTGzQ4hJClShCSkCamykIUkBLJVIQlx6VxALQRtBAtR/wWxVAQFCwtREUFUxMoVtFFwK0RQQQW1cmkEUdTfJ2cub5l377MQlPO735mZM/N5750773rGJf9dCYPn3GQNjMGeMYJWwTMIjbA7uM/MXliDWvgBD4xfaB2sQyfcBW+kMtCECWZkwSHUwwu4ZihvJD+CXBiGW5AUqQyaqHwNG/AeKmAVXCgvp/EJtuAL6C6R+PAZvKGkEI4hGxbBxSmJQM5jnmseKGT4REksPoNSK9BdzFgeJuMMtsNtKIa48Bn8sQoZWBopLVbx1zQQn4G2pQrco9EjcahfuLZU7Tld4BXEhc/gwCq0kyyNFO0mFWmXSQN8Bis26l6YJjlsKMO1pepzH9yyGrH4DNyL/R1bGJH/s/Fp00B8Bh02WmIaJVqjzIraTAPRYNCwROeMjod3tPUdIEHokYigg6QAXsISTEJc+Ay0M6qtSlv1keU+eUpnAygqdUnEZ6CaLi6j8Bi64QYkxh06+uAh9MMAJEUqAxXmc9mBn9AMsY/mJm2doh9QnahJXzD95xFmsE1FJmiP64W3kmvhe2gP5IC+Gb2nXXJvhBlogl6ajuMTGkWg34dB9D/oGNdxPkueMqIMNFH/rb6JfRra799Q3d13dAhCIx0DLaCFvpIswBR8BCkSHukaaBUdfm9JPsMmpBUXMUhrwcSiMwAAAP//7N3aAQAAAAZJREFUAwDU21gxvTRIFwAAAABJRU5ErkJggg=="/></a></div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Airport Residential Area, Accra, Ghana</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABUUlEQVR4AeyVTysFURjGh52VwkIoEtmyoWQhH8Da3lIWUjZKiY2yEGVpQ5bKJ5BvYGshyk7yAST3/p7bfU/vnPt/5v7Z3NvzO+973pnzPjNnprmDSYd/PTGY5aZmoC2K7+CSrm/wDueQW95ggW67YNonmYZc8gbVGg1UK7ZS8wavLLwG0wXJB+SSN1CjHQZt1TxxD3IrNlil4wRMwQqYlkjWyywTpRGGTTiEI5iDCsUGD5zxVOaeaLoisfot+RZ8wyOcwjFoiw+IKcUGqYM1JmPUbyB+AdTrjPoGBKkYJk0m2pohzv2BF/gHr20/yWKg9XcMo6Bnk7piaosQlNXgJHRIkmfyTzBNWqKY1UCfEq03viwhDkNQPYP4IYZFJH/g9esnPq9n4M/LnPcNGm5d17donEvS2yP018m0pDVG1YwCcy99JO2YYjjW9TsIzu1KigAAAP//5dbpXgAAAAZJREFUAwAhvCMxjd/TGgAAAABJRU5ErkJggg=="/></a></div>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>linkedin.com/in/vicky-dwira</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Download Section -->
+    <section class="cv-download" id="cv-download">
+        <div class="container">
+            <div class="cv-content">
+                <h2>Download My Resume</h2>
+                <p>Get a detailed overview of my experience, skills, and qualifications</p>
+                <a href="CV - VICKY B. DWIRA.pdf" class="btn btn-primary cv-btn" onclick="downloadCV()">
+                    <span class="download-icon">⬇</span>
+                    Download CV
+
+          
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Vicky Dwira. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
