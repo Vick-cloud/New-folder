@@ -213,7 +213,7 @@ body {
     background: #f5f2ed;
     display: flex;
     align-items: center;
-    padding-top: 80px;
+    /* padding-top: 80px; */
     /* animation: fadeIn 1s ease-in; */
 }
 
