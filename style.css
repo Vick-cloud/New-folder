@@ -1,12 +1,9 @@
 /* Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-</style>
 
 * {
     margin: 0;
@@ -20,7 +17,7 @@ html {
 }
 
 body {
-    font-family:  "Zilla Slab", serif;
+    font-family: "Zilla Slab", serif;
     line-height: 1.6;
     color: #faa307;
     background-color: #ffffff;
@@ -39,9 +36,10 @@ body {
     left: 0;
     right: 0;
     background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(255, 165, 0, 0.4);
 }
 
 .nav-container {
@@ -127,15 +125,96 @@ body {
     transition: 0.3s;
 }
 
-
 /* Hero Section */
+
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    /* vertically center image + text */
+    justify-content: space-between;
+    /* gap: 2rem; */
+    max-width: 1200px;
+    margin: auto;
+    min-height: 40vh;
+    /* hero fills viewport nicely */
+    /* background-color: lightblue; */
+}
+
+/* Image column */
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* center image horizontally */
+    align-items: center;
+    /* center image vertically */
+    display: block;
+
+}
+
+/* Add this new rule below */
+.hero-image img {
+    width: 70%;
+    /* The image will take up 80% of the container's width */
+    height: auto;
+    /* Maintains the image's aspect ratio */
+    max-width: 100%;
+    /* Ensures the image never overflows its container */
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+
+
+/* Text column */
+.hero-right {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        /* remove fixed height on mobile */
+    }
+
+    .hero-image img {
+        max-width: 250px;
+        /* smaller image on mobile */
+        height: auto;
+    }
+}
+
 .hero {
     min-height: 100vh;
+    /* background: #faa307; */
     background: #f5f2ed;
     display: flex;
     align-items: center;
     padding-top: 80px;
-    animation: fadeIn 1s ease-in;
+    /* animation: fadeIn 1s ease-in; */
 }
 
 .hero-container {
@@ -154,48 +233,46 @@ body {
 
 .hero-left {
     text-align: center;
-    animation: slideInLeft 5s ease-out 0.2s both;
+    /* animation: slideInLeft 5s ease-out 0.2s both; */
 }
 
-/* .profile-image-container {
+.profile-image-container {
     margin-bottom: 2rem;
     position: relative;
-} */
-
-/* .profile-image {
-    width: 300px;
-    height: 300px;
-    /* border-radius: 50%; */
-
-
+}
 
 .profile-image {
-  width: 180px;              /* smaller default size */
-  height: 180px;
-  /* object-fit: cover; */
-  /* border: 6px solid #ffffff;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1); */
-  transition: transform 0.3s ease;
-  border-radius: 5%;        /* optional: make it circular */
+    width: 300px;
+    height: 300px;
+}
+
+/* Only keep profile-image code for image itself */
+.profile-image {
+    width: 180px;
+    /* smaller default size */
+    height: 180px;
+    /* object-fit: cover; */
+    /* border: 6px solid #ffffff;
+    transition: transform 0.3s ease;
+    border-radius: 5%;
+    /* optional: make it circular */
 }
 
 /* On larger screens, increase image size */
 @media (min-width: 768px) {
-  .profile-image {
-    width: 220px;
-    height: 220px;
-  }
+    .profile-image {
+        width: 220px;
+        height: 220px;
+    }
 }
 
 @media (min-width: 1200px) {
-  .profile-image {
-    width: 400px;
-    height: 500px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  }
+    .profile-image {
+        width: 220px;
+        height: 220px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
 }
-
-
 
 .profile-image:hover {
     transform: scale(1.05);
@@ -284,9 +361,15 @@ section {
 /* About Section */
 .about {
     background: #ffffff;
+
 }
 
+
+
+
+
 .about-content {
+
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
@@ -312,10 +395,10 @@ section {
 }
 
 .skill-category {
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     animation: fadeInUp 1s ease-out;
 }
@@ -333,12 +416,12 @@ section {
 .skill-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 2rem;
 }
 
 .skill-tag {
-    background: #e0f2fe;
-    color: #faa307;
+    background: #f0a028;
+    color: #000000;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -439,7 +522,7 @@ section {
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     animation: fadeInUp 1s ease-out;
 }
@@ -461,7 +544,7 @@ section {
     transition: transform 0.3s ease;
 }
 
-.project-overlay {
+/* .project-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -473,9 +556,9 @@ section {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-}
+} */
 
-.project-image:hover .project-overlay {
+/* .project-image:hover .project-overlay {
     opacity: 1;
 }
 
@@ -492,12 +575,12 @@ section {
     border: 2px solid white;
     border-radius: 25px;
     transition: all 0.3s ease;
-}
+} */
 
-.project-link:hover {
+/* .project-link:hover {
     background: white;
     color: #f48c06;
-}
+} */
 
 .project-info {
     padding: 1.5rem;
@@ -527,7 +610,7 @@ section {
 }
 
 .education-card {
-    background: #f9fafb;
+    background: #f7f6f5;
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
@@ -695,6 +778,7 @@ section {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -705,6 +789,7 @@ section {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -716,6 +801,7 @@ section {
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -727,6 +813,7 @@ section {
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -738,6 +825,7 @@ section {
         opacity: 0;
         transform: translateX(-100px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -749,6 +837,7 @@ section {
         opacity: 0;
         transform: translateX(100px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -766,7 +855,7 @@ section {
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
     }
 
